@@ -3,7 +3,7 @@
 // REVIEW: Configure an object to hold all of our functions for dynamic updates and article-related event handlers.
 let articleView = {};
 
-articleView.populateFilters = function() {
+articleView.populateFilters = function() { //the following uses contextual this, but no .prototype???
   $('article').each(function() {
     // REVIEW: We can declare several variables at once and assign their values later when using let. Keep in mind that we cannot do this with const.
     let authorName, category, optionTag;
@@ -16,6 +16,7 @@ articleView.populateFilters = function() {
       // TODO: Refactor this concatenation using a template literal.
       optionTag = '<option value="' + authorName + '">' + authorName + '</option>';
 
+      // if author name does not already exist on menu then append it(??)
       if ($('#author-filter option[value="' + authorName + '"]').length === 0) {
         $('#author-filter').append(optionTag);
       }
