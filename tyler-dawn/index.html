@@ -76,10 +76,12 @@
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="scripts/blogArticles.js"></script>
+  <!-- done: Link our new script file in. -->
+  <script src="scripts/articleView.js"></script>
   <script src="scripts/article.js"></script>
-  <!-- TODO: Link our new script file in. -->
 
-  <!-- COMMENT: Explain the ordering of your script files. -->
-  <!-- PUT YOUR RESPONSE HERE -->
+
+  <!-- done: Explain the ordering of your script files. -->
+  <!-- We're creating the articles after building the object functions in articleView that will be called while creating the objects. If we created article view after article.js, the objects wouldn't have access to those methods -->
 </body>
 </html>
